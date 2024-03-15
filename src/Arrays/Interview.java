@@ -1,0 +1,37 @@
+package Arrays;
+
+public class Interview {
+
+	public static void main(String[] args) {
+int[][] arr = new int[3][3];
+		
+		arr[0][0] = 9;
+		arr[0][1] = 8;
+		arr[0][2] = 7;
+		arr[1][0] = 6;
+		arr[1][1] = 5;
+		arr[1][2] = 4;
+		arr[2][0] = 3;
+		arr[2][1] = 2;
+		arr[2][2] = 1;
+		int min = arr[0][0];
+		int min_col = 0;
+		int max = 0;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=0; j<arr.length; j++) {
+				if(arr[i][j] < min){
+					min = arr[i][j];
+					min_col = j;
+				}
+			}
+		}
+		for(int i=0; i<arr.length; i++) {
+			if(arr[i][min_col]>max) {
+				max = arr[i][min_col];
+			}
+		}
+		
+		System.out.println(max);
+	}
+
+}
